@@ -1,10 +1,9 @@
-# Inject custom CSS
-with open("custom.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    
 import os, joblib, numpy as np, pandas as pd, plotly.graph_objects as go
 import streamlit as st
 from sklearn.base import BaseEstimator, TransformerMixin
+# Inject custom CSS
+with open("custom.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ───────────────────────────────────────────────
 # 1 ▸ DEFINE CUSTOM TRANSFORMERS FIRST
