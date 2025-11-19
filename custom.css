@@ -1,0 +1,131 @@
+/* ================================================
+   1. Core Theme Colors
+   ================================================ */
+:root {
+  /* Primary gradient stops */
+  --color-primary-start: #FF4500;  /* Orangered[4] */
+  --color-primary-end:   #4D728B;  /* Muted blue-gray[5] */
+
+  /* Secondary accent */
+  --color-accent:        #CDD1D6;  /* Soft light gray[2] */
+  
+  /* Neutrals */
+  --color-bg-light:      #F5F7FA;  /* Pale background[2] */
+  --color-bg-white:      #FFFFFF;
+  --color-text-main:     #212529;  /* Dark charcoal */
+  --color-text-muted:    #6C757D;  /* Medium gray */
+
+  /* Action colors */
+  --color-success:       #2ECC71;  /* Green for negative bar */
+  --color-danger:        #E74C3C;  /* Red for positive bar */
+}
+
+/* ================================================
+   2. Global & Body
+   ================================================ */
+body, .stApp {
+  background: linear-gradient(135deg, var(--color-bg-light), #C3CFE2);
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================================
+   3. Header Banner
+   ================================================ */
+.main-header {
+  background: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+  padding: 2rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main-header h1 {
+  color: var(--color-bg-white);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+.main-header p {
+  color: var(--color-accent);
+  margin: .3rem 0 0;
+  font-weight: 400;
+}
+
+/* ================================================
+   4. Buttons
+   ================================================ */
+.stButton>button {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: .75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-bg-white);
+  background: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+  box-shadow: 0 4px 15px rgba(51,82,100,0.35);
+  transition: all .3s ease;
+}
+.stButton>button:hover {
+  background: linear-gradient(135deg, var(--color-primary-end), #678CA1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(51,82,100,0.45);
+}
+
+/* ================================================
+   5. Cards / Result Panels
+   ================================================ */
+.card {
+  background: var(--color-bg-white);
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  border: 1px solid #E9ECEF;
+  transition: transform .3s ease, box-shadow .3s ease;
+  margin: 1rem 0;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* ================================================
+   6. Inputs & Forms
+   ================================================ */
+.stNumberInput input,
+.stFileUploader>div>div {
+  border: 2px solid #E9ECEF;
+  border-radius: 8px;
+  padding: .65rem;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.stNumberInput input:focus {
+  border-color: var(--color-primary-start);
+  box-shadow: 0 0 0 3px rgba(51,82,100,0.18);
+}
+
+/* ================================================
+   7. Radio & Select Wrappers
+   ================================================ */
+.stRadio>div,
+[data-testid="stProgress"] div>div>div>div {
+  background: var(--color-bg-white);
+  border: 1px solid #E9ECEF;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* ================================================
+   8. Footer
+   ================================================ */
+.footer {
+  background: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+  color: var(--color-bg-white);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2.5rem;
+}
